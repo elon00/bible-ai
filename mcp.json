@@ -1,10 +1,34 @@
 {
-  "name": "vowx",
-  "ticker": "VOWX",
-  "category": "Restaking_LSD",
+  "name": "bible-ai-mcp",
+  "version": "1.0.0",
+  "description": "Bible AI Model Context Protocol Server for Sacred Scripture Hermeneutics, Prophetic Justice & Biblical Wisdom",
   "tools": [
-    { "name": "query_conway_state", "description": "Fetches current cellular automaton lattice" },
-    { "name": "execute_x402_settlement", "description": "Executes HTTP 402 micro-settlement" },
-    { "name": "fetch_quicknode_rpc", "description": "Queries QuickNode multi-chain endpoint" }
+    {
+      "name": "query_scripture_hermeneutics",
+      "description": "Cross-reference theological queries against original Hebrew, Aramaic, and Greek texts with multi-layer hermeneutical exegesis",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "passage": { "type": "string" },
+          "hermeneutic_framework": { "type": "string", "enum": ["historical_grammatical", "typological", "prophetic_justice", "moral_wisdom"] },
+          "theological_question": { "type": "string" }
+        },
+        "required": ["passage", "theological_question"]
+      }
+    },
+    {
+      "name": "disburse_translation_grant",
+      "description": "Release micro-escrow grants directly to minority language scripture translators and biblical literacy schools",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "initiative": { "type": "string" },
+          "recipient": { "type": "string" },
+          "amount_wei": { "type": "string" },
+          "scripture_hash": { "type": "string" }
+        },
+        "required": ["initiative", "recipient", "amount_wei"]
+      }
+    }
   ]
 }
